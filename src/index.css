@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-background: #0B0B0B;
+  --color-secondary: #141414;
+  --color-accent: #FFD600;
+  --color-muted: #888888;
+  --color-card-border: rgba(255, 255, 255, 0.08);
+  --color-card-bg: rgba(20, 20, 20, 0.6);
+
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+  --font-display: 'Space Grotesk', sans-serif;
+
+  --radius-2xl: 1.25rem;
+  --radius-3xl: 2rem;
+
+  --shadow-glow: 0 0 25px rgba(255, 214, 0, 0.2);
+  --shadow-glow-strong: 0 0 40px rgba(255, 214, 0, 0.4);
+  --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-pulse-glow: pulse-glow 3s ease-in-out infinite;
+  --animate-tilt: tilt 10s infinite linear;
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0); }
+    50% { transform: translateY(-15px) rotate(1deg); }
+  }
+  @keyframes pulse-glow {
+    0%, 100% { opacity: 0.5; transform: scale(1); }
+    50% { opacity: 0.8; transform: scale(1.1); }
+  }
+  @keyframes tilt {
+    0%, 50%, 100% { transform: rotate3d(0, 0, 1, 0deg); }
+    25% { transform: rotate3d(0, 0, 1, 3deg); }
+    75% { transform: rotate3d(0, 0, 1, -3deg); }
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-background text-white font-sans selection:bg-accent selection:text-background overflow-x-hidden antialiased;
+    background-image: 
+      radial-gradient(circle at 50% 50%, rgba(255, 214, 0, 0.03) 0%, transparent 50%),
+      url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3%3Ffilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    background-attachment: fixed;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-bold tracking-tight;
+  }
+
+  /* Prevent horizontal scroll globally */
+  html, body {
+    max-width: 100vw;
+    overflow-x: hidden;
+    position: relative;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-card-bg backdrop-blur-xl border border-card-border rounded-2xl transition-all duration-500;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.02);
+  }
+
+  /* Mobile-friendly hover states - only on devices that support hover */
+  @media (hover: hover) {
+    .glass-card:hover {
+      @apply border-white/20 shadow-glow;
+      transform: translateY(-5px);
+    }
+  }
+
+  .glow-text {
+    @apply text-accent drop-shadow-[0_0_15px_rgba(255,214,0,0.4)];
+  }
+
+  .btn-primary {
+    @apply relative overflow-hidden bg-accent text-background font-bold px-6 py-3.5 sm:px-8 sm:py-4 rounded-2xl transition-all duration-300 flex items-center justify-center gap-2 z-10 min-h-[48px] sm:min-h-[56px];
+  }
+
+  @media (hover: hover) {
+    .btn-primary:hover {
+      @apply shadow-glow-strong scale-[1.02];
+    }
+  }
+
+  .btn-primary:active {
+    @apply scale-[0.98];
+  }
+
+  .btn-outline {
+    @apply border border-white/20 text-white font-bold px-6 py-3.5 sm:px-8 sm:py-4 rounded-2xl transition-all duration-300 flex items-center justify-center gap-2 min-h-[48px] sm:min-h-[56px];
+  }
+
+  @media (hover: hover) {
+    .btn-outline:hover {
+      @apply bg-white/5 border-accent/50;
+    }
+  }
+
+  .input-field {
+    @apply bg-white/[0.03] border border-white/10 rounded-2xl px-5 py-3.5 sm:px-6 sm:py-4 focus:outline-none focus:border-accent/40 focus:ring-1 focus:ring-accent/40 transition-all text-white placeholder:text-white/20 text-base sm:text-lg;
+  }
+
+  .section-padding {
+    @apply py-16 sm:py-24 px-4 sm:px-6 lg:px-12 max-w-7xl mx-auto w-full;
+  }
+
+  .cursor-glow {
+    @apply fixed pointer-events-none w-[300px] sm:w-[600px] h-[300px] sm:h-[600px] rounded-full blur-[80px] sm:blur-[120px] bg-accent/5 -translate-x-1/2 -translate-y-1/2 z-[0] opacity-50 sm:opacity-100;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-background;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-white/10 rounded-full;
+}
+
+/* Responsive Table Helper */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
