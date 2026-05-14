@@ -5,6 +5,8 @@
 
 **CredPilot** is a premium, high-stakes fintech dashboard designed to bridge the gap between complex financial data and human decision-making. Built with a "Precision Systems" aesthetic, it provides a clinical, data-rich interface for loan eligibility analysis, market rate arbitrage, and financial health optimization.
 
+Live Link - cred-pilot.vercel.app
+
 ---
 
 ## 💎 Design Philosophy: "Precision Systems"
