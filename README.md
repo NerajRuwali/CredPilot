@@ -80,7 +80,7 @@ This project is optimized for deployment on **Vercel** or **Netlify**.
 
 ## 👨‍💻 Author
 **Neeraj Ruwali**  
-*Senior Frontend Engineer & UI Designer*
+
 
 ---
 © 2026 CredPilot Precision Systems. All rights reserved.
