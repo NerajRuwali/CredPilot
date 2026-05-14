@@ -1,88 +1,154 @@
 # ✈️ CredPilot — Borrow with Absolute Confidence
 
-[![Deployment Status](https://img.shields.io/badge/Deployment-Live-accent?style=for-the-badge)](https://credpilot.vercel.app)
+[![Deployment Status](https://img.shields.io/badge/Deployment-Live-accent?style=for-the-badge)](https://cred-pilot.vercel.app)
 [![Tech Stack](https://img.shields.io/badge/Stack-React%20%7C%20Vite%20%7C%20Tailwind-blue?style=for-the-badge)](https://github.com/NerajRuwali/CredPilot)
 
-**CredPilot** is a premium, high-stakes fintech dashboard designed to bridge the gap between complex financial data and human decision-making. Built with a "Precision Systems" aesthetic, it provides a clinical, data-rich interface for loan eligibility analysis, market rate arbitrage, and financial health optimization.
-
-Live Link - cred-pilot.vercel.app
+🌐 **Live Deployment:** https://cred-pilot.vercel.app
 
 ---
 
-## 💎 Design Philosophy: "Precision Systems"
-CredPilot moves away from the generic SaaS templates. It utilizes:
-- **Asymmetric Composition**: Handcrafted layouts inspired by high-end design firms (Linear, Stripe).
-- **Tactile UI**: Interactive cursor-follow glows, spring-animated transitions, and depth layering.
-- **Storytelling UX**: Conversational copy that guides users through their financial journey.
-- **Glassmorphism 2.0**: Sophisticated noise-textured cards with ambient lighting.
+## 📌 Overview
 
-## 🚀 Core Features
-- **Verdict Engine**: A multi-step, 60-second eligibility analysis with real-time risk profiling.
-- **Smart Actions**: AI-driven recommendations for loan consolidation and rate optimization.
-- **Market Arbitrage**: Live side-by-side comparison of premium lending partners.
-- **Repayment Simulator**: High-fidelity EMI planning with principal-vs-interest breakdown charts.
-- **Govt Gateway**: Searchable database of government-backed financial support schemes.
-- **Fully Responsive**: Fluid layout scaling from mobile to ultrawide monitors.
+**CredPilot** is a premium futuristic fintech platform crafted to simplify loan eligibility analysis through intelligent financial visualization and modern UX design.
 
-## 🛠️ Tech Stack
-- **Framework**: [React 19](https://react.dev/) + [Vite](https://vitejs.dev/)
-- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/) (Modern `@theme` architecture)
-- **Motion**: [Framer Motion](https://www.framer.com/motion/) (Layout animations, 60fps transitions)
-- **Charts**: [Recharts](https://recharts.org/) (Responsive financial data visualization)
-- **Icons**: [Lucide React](https://lucide.dev/) (Clean, modern iconography)
-- **Forms**: [React Hook Form](https://react-hook-form.com/) (Performant state management)
+Built with a handcrafted “Precision Systems” design philosophy, CredPilot blends:
+- luxury fintech aesthetics
+- real-time financial analytics
+- interactive dashboards
+- intelligent loan insights
+- responsive product-grade UI
 
-## 📂 Folder Structure
+The platform transforms complex financial calculations into a smooth, data-rich user experience.
+
+---
+
+# 💎 Design Philosophy — “Precision Systems”
+
+CredPilot intentionally avoids generic SaaS templates.
+
+Instead, it focuses on:
+- **Asymmetric Composition** inspired by premium fintech products
+- **Tactile Interactions** with cinematic motion design
+- **Storytelling UX** using conversational financial copy
+- **Layered Glassmorphism** with ambient glows and depth
+- **Human-Centered Layouts** designed to feel handcrafted
+
+Inspired by:
+- Linear
+- Stripe
+- CRED
+- Ramp
+- Brex
+
+---
+
+# 🚀 Core Features
+
+## 🧠 Verdict Engine
+A multi-step intelligent loan eligibility analysis system with:
+- income evaluation
+- credit score assessment
+- repayment risk analysis
+- approval probability calculation
+
+---
+
+## 📊 Smart Financial Dashboard
+Interactive analytics dashboard featuring:
+- loan approval probability
+- repayment health indicators
+- financial confidence score
+- borrowing power insights
+- live financial widgets
+
+---
+
+## 💳 EMI Repayment Simulator
+Advanced EMI planning system with:
+- monthly EMI calculation
+- principal vs interest breakdown
+- repayment duration analysis
+- financial burden visualization
+
+---
+
+## 🏦 Market Arbitrage
+Compare lending institutions side-by-side:
+- interest rates
+- processing fees
+- approval speed
+- tenure flexibility
+- repayment estimates
+
+---
+
+## 🏛️ Govt Gateway
+Searchable financial support schemes including:
+- Mudra Loan
+- Startup India
+- Education Loan Programs
+- Women Entrepreneur Support Schemes
+
+---
+
+## 📱 Fully Responsive Experience
+Optimized for:
+- mobile devices
+- tablets
+- laptops
+- ultrawide monitors
+
+With:
+- adaptive layouts
+- responsive charts
+- mobile-first optimization
+- fluid typography
+
+---
+
+# 🛠️ Tech Stack
+
+| Category | Technology |
+|---|---|
+| Framework | React 19 + Vite |
+| Styling | Tailwind CSS v4 |
+| Motion | Framer Motion |
+| Charts | Recharts |
+| Icons | Lucide React |
+| Forms | React Hook Form |
+| Routing | React Router |
+| Deployment | Vercel |
+
+---
+
+# 🎨 UI & UX Highlights
+
+- Black + Yellow futuristic fintech theme
+- Ambient glow lighting
+- Cursor-follow interactions
+- Floating analytics cards
+- Cinematic motion design
+- Glassmorphism 2.0
+- Interactive hover states
+- Humanized layout composition
+- Premium typography hierarchy
+
+---
+
+# 📂 Folder Structure
+
 ```text
 src/
-├── components/     # Reusable UI (Navbar, Footer, CursorGlow)
-├── pages/          # Full page views (Dashboard, Eligibility, Calculator)
-├── sections/       # Modular landing page blocks (Hero, Features, FAQ)
-├── assets/         # Static media and brand elements
-├── index.css       # Design system and Tailwind v4 themes
-└── App.jsx         # Routing and layout orchestration
-```
-
-## 💻 Local Setup & Installation
-
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/NerajRuwali/CredPilot.git
-   cd CredPilot
-   ```
-
-2. **Install dependencies:**
-   ```bash
-   npm install
-   ```
-
-3. **Start development server:**
-   ```bash
-   npm run dev
-   ```
-
-4. **Build for production:**
-   ```bash
-   npm run build
-   ```
-
-## 🌐 Deployment
-This project is optimized for deployment on **Vercel** or **Netlify**.
-- **Build Command**: `npm run build`
-- **Output Directory**: `dist`
-- **SPA Routing**: Ensure `index.html` is served for all routes (Vercel handles this automatically via `vercel.json`).
-
-## 🔮 Future Enhancements
-- [ ] **Real-time API Integration**: Connect to actual credit bureau APIs.
-- [ ] **Auth Systems**: Implement secure user accounts with financial data persistence.
-- [ ] **Multi-currency Support**: Adapt for global debt markets.
-- [ ] **PDF Export**: Generate professional financial reports for bank submission.
-
----
-
-## 👨‍💻 Author
-**Neeraj Ruwali**  
-
-
----
-© 2026 CredPilot Precision Systems. All rights reserved.
+├── components/     # Reusable UI Components
+├── pages/          # Main Page Views
+├── sections/       # Landing Page Sections
+├── charts/         # Financial Visualization Components
+├── hooks/          # Custom React Hooks
+├── context/        # Global Context Providers
+├── utils/          # Utility Functions
+├── constants/      # Static Configurations
+├── data/           # Mock Financial Data
+├── assets/         # Images & Brand Assets
+├── animations/     # Motion Configurations
+├── App.jsx         # App Routing
+└── main.jsx        # Entry Point
